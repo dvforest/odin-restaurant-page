@@ -5,23 +5,54 @@
 }
 
 body {
-    background-image: url("./img/home.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: rgba(0,0,0,0.25);
-    background-blend-mode: multiply;
+    display: grid;
+    grid-template-rows: 80px 1fr 50px;
+    height: 100vh;
 }
 
 html {
     font-size: 16px;
 }
 
-.content {
+header {
+    grid-row: 1;
+}
+
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    gap: 4rem;
+    height: 100%;
+}
+
+nav button {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    font-family: "Didact Gothic", sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(87, 87, 87)
+}
+
+.content {
+    grid-row: 2;
+    background-image: url("./img/river.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,0.1);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    grid-row: 3;
 }
 
 .home {
@@ -29,16 +60,21 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+}
+
+.home * {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
 .home .title {
-    font-size: 7rem;
+    font-size: 6rem;
     font-family: "Tilt Warp", sans-serif;
     letter-spacing: 0.4rem;
 }
 
 .home .subtitle {
-    font-size: 6rem;
+    font-size: 5rem;
     font-family: "Meow Script", cursive;
     line-height: 5rem;
 }
