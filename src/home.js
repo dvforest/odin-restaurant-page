@@ -7,19 +7,21 @@ class Home {
             },
             {class: "title",
                 element: "div",
-                textContent: "Cuddington Cafe"
+                textContent: "CAFÉ BRUME"
             },
             {class: "title-paragraph",
                 element: "p",
-                textContent: "We hope you like it here!"
+                textContent: "Discover our famous artisan coffee brews and curated book collection in a charming setting in the heart of Old Québec."
             },
         ]
     }
 
     generateHTML() {
-        return this.elements.map(item =>
+        let innerElements = this.elements.map(item =>
             `<${item.element} class="${item.class}">${item.textContent}</${item.element}>`
         ).join("");
+        let wrappedElements = `<div class="home">${innerElements}</div>`
+        return wrappedElements;
     }
     
 }

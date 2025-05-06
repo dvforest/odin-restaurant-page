@@ -1,6 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url("./img/home.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: rgba(0,0,0,0.25);
+    background-blend-mode: multiply;
+}
+
+html {
+    font-size: 16px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.home {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home .title {
+    font-size: 7rem;
+    font-family: "Tilt Warp", sans-serif;
+    letter-spacing: 0.4rem;
+}
+
+.home .subtitle {
+    font-size: 6rem;
+    font-family: "Meow Script", cursive;
+    line-height: 5rem;
+}
+
+.home .title-paragraph {
+    font-size: 1.2rem;
+    width: 500px;
+    font-family: "Didact Gothic", sans-serif;
+    margin: 0;
+    text-align: center;
+    text-wrap: pretty;
 }
