@@ -40,7 +40,6 @@ nav button {
 
 .content {
     grid-row: 2;
-    background-image: url("./img/river.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

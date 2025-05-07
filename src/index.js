@@ -9,13 +9,12 @@ const home = new Home();
 const menu = new Menu();
 const reservation = new Reservation();
 
-// Functions
+// Add event listeners
 function display(page){
     container.innerHTML = "";
     container.innerHTML = page.generateHTML();
+    container.style.backgroundImage = page.backgroundImage;
 }
-
-// Add event listeners
 document.getElementById("homeButton").addEventListener("click", () => {
     display(home);
 });

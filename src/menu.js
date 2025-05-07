@@ -1,3 +1,5 @@
+import backgroundImage from "./img/croissants.jpg";
+
 class Menu {
     constructor() {
         this.elements = [
@@ -9,7 +11,9 @@ class Menu {
                 element: "div",
                 textContent: "Croissant"
                },
-        ]
+        ];
+
+        this.backgroundImage = `url(${backgroundImage})`;
     }
 
     generateHTML() {

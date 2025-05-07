@@ -1,3 +1,5 @@
+import backgroundImage from "./img/river.jpg";
+
 class Home {
     constructor() {
         this.elements = [
@@ -13,7 +15,9 @@ class Home {
                 element: "p",
                 textContent: "Discover our famous artisan coffee brews and curated book collection in a charming setting in the heart of Old Québec."
             },
-        ]
+        ];
+
+        this.backgroundImage = `url(${backgroundImage})`;
     }
 
     generateHTML() {

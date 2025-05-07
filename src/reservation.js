@@ -1,3 +1,5 @@
+import backgroundImage from "./img/book.jpg";
+
 class Reservation {
     constructor() {
         this.elements = [
@@ -9,7 +11,9 @@ class Reservation {
                 element: "button",
                 textContent: "Reserve"
                },
-        ]
+        ];
+
+        this.backgroundImage = `url(${backgroundImage})`;
     }
 
     generateHTML() {
