@@ -16,10 +16,18 @@ class Reservation {
         this.backgroundImage = `url(${backgroundImage})`;
     }
 
-    generateHTML() {
-        return this.elements.map(item =>
-            `<${item.element} class="${item.class}">${item.textContent}</${item.element}>`
-        ).join("");
+    generateDOM() {
+        let container = document.createElement("div");
+        container.classList.add("reservation");
+
+        this.elements.forEach(item => {
+            let element = document.createElement(item.element);
+            element.classList.add(item.class);
+            element.textContent = item.textContent;
+            container.appendChild(element);
+        });
+
+        return container;
     }
     
 }

@@ -12,7 +12,7 @@ const reservation = new Reservation();
 // Add event listeners
 function display(page){
     container.innerHTML = "";
-    container.innerHTML = page.generateHTML();
+    container.appendChild(page.generateDOM());
     container.style.backgroundImage = page.backgroundImage;
 }
 document.getElementById("homeButton").addEventListener("click", () => {

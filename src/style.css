@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    all: unset;
+}
+
 body {
     display: grid;
     grid-template-rows: 80px 1fr 50px;
@@ -36,6 +40,10 @@ nav button {
     text-transform: uppercase;
     font-weight: 600;
     color: rgb(87, 87, 87)
+}
+
+nav button:hover {
+    color: rgb(156, 156, 156)
 }
 
 .content {
@@ -85,4 +93,57 @@ footer {
     margin: 0;
     text-align: center;
     text-wrap: pretty;
+}
+
+.menu .title {
+    font-size: 5rem;
+    font-family: "Meow Script", cursive;
+    line-height: 5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu {
+    background-color: white;
+    width: 500px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+}
+
+.food-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted rgb(183 152 91);
+}
+
+.food-column {
+    width: 100%;
+}
+
+.food-wrapper {
+    margin-bottom: 10px;
+}
+
+.food-title {
+    font-size: 1.2rem;
+    color: black;
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 600;
+}
+
+.food-price {
+    font-size: 1rem;
+    color: rgb(62, 62, 62);
+    font-weight: 200;
+    font-family: "Didact Gothic", sans-serif;
+}
+
+.food-description {
+    font-size: 0.9rem;
+    color: rgb(108, 108, 108);
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 100;
 }

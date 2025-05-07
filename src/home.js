@@ -4,11 +4,11 @@ class Home {
     constructor() {
         this.elements = [
             {class: "subtitle",
-             element: "div",
+             element: "h2",
              textContent: "Welcome to"
             },
             {class: "title",
-                element: "div",
+                element: "h1",
                 textContent: "CAFÉ BRUME"
             },
             {class: "title-paragraph",
@@ -20,12 +20,18 @@ class Home {
         this.backgroundImage = `url(${backgroundImage})`;
     }
 
-    generateHTML() {
-        let innerElements = this.elements.map(item =>
-            `<${item.element} class="${item.class}">${item.textContent}</${item.element}>`
-        ).join("");
-        let wrappedElements = `<div class="home">${innerElements}</div>`
-        return wrappedElements;
+    generateDOM() {
+        let container = document.createElement("div");
+        container.classList.add("home");
+
+        this.elements.forEach(item => {
+            let element = document.createElement(item.element);
+            element.classList.add(item.class);
+            element.textContent = item.textContent;
+            container.appendChild(element);
+        });
+
+        return container;
     }
     
 }
