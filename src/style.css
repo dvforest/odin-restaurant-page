@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style-type: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -17,6 +18,8 @@ body {
 html {
     font-size: 16px;
 }
+
+/****** HEADER ******/
 
 header {
     grid-row: 1;
@@ -46,6 +49,8 @@ nav button:hover {
     color: rgb(156, 156, 156)
 }
 
+/****** CONTENT ******/
+
 .content {
     grid-row: 2;
     background-size: cover;
@@ -58,9 +63,14 @@ nav button:hover {
     align-items: center;
 }
 
+/****** FOOTER ******/
+
+
 footer {
     grid-row: 3;
 }
+
+/****** HOME ******/
 
 .home {
     color: white;
@@ -95,13 +105,7 @@ footer {
     text-wrap: pretty;
 }
 
-.menu .title {
-    font-size: 5rem;
-    font-family: "Meow Script", cursive;
-    line-height: 5rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
+/****** MENU ******/
 
 .menu {
     background-color: white;
@@ -111,6 +115,14 @@ footer {
     flex-direction: column;
     align-items: center;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+}
+
+.menu .title {
+    font-size: 5rem;
+    font-family: "Meow Script", cursive;
+    line-height: 5rem;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .food-header {
@@ -146,4 +158,98 @@ footer {
     color: rgb(108, 108, 108);
     font-family: "Didact Gothic", sans-serif;
     font-weight: 100;
+}
+
+/****** RESERVATION ******/
+
+.reservation {
+    border: 2px solid white;
+    width: 500px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+}
+
+.reservation .title {
+    font-size: 5rem;
+    font-family: "Meow Script", cursive;
+    line-height: 5rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.reservation .subtitle {
+    font-size: 1.2rem;
+    width: 500px;
+    font-family: "Didact Gothic", sans-serif;
+    margin: 0;
+    text-align: center;
+    text-wrap: pretty;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.reservation ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+}
+
+.reservation li {
+    width: min(40%, 200px);
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.reservation .label {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400;
+}
+
+.reservation input, textarea {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    color: black;
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 1000;
+}
+
+.reservation input::placeholder, textarea::placeholder {
+    color: rgb(116, 116, 116);
+    font-weight: 200;
+}
+
+
+.reservation textarea {
+    height: 100px;
+    resize: none;
+}
+
+.reservation .submit-button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 100%;
+    font-family: "Didact Gothic", sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 1000;
+    height: 100px;
+    padding: 0px 20px;
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+    background-color: rgb(155, 129, 129);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.reservation .submit-button:hover {
+    background-color: rgb(220, 220, 220);
+    color: rgb(155, 129, 129);
 }

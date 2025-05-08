@@ -26,17 +26,17 @@ class Menu {
     }
 
     generateDOM() {
-        let container = document.createElement("div");
+        const container = document.createElement("div");
         container.classList.add("menu");
 
         // Create title
-        let title = document.createElement("h2");
+        const title = document.createElement("h2");
         title.textContent = this.title;
         title.classList.add("title");
         container.appendChild(title);
 
         // Create food column
-        let foodColumn = document.createElement("div");
+        const foodColumn = document.createElement("div");
         foodColumn.classList.add("food-column");
         container.appendChild(foodColumn);
 
